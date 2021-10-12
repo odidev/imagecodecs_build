@@ -54,7 +54,7 @@ mv "${download_dir}/liblzf-3.6" "${download_dir}/liblzf"
 # wget -q 'https://sourceforge.net/projects/swig/files/swig/swig-3.0.10/swig-3.0.10.tar.gz'
 # tar zxvf  swig-3.0.10.tar.gz -C "${download_dir}"
 
-wget https://sourceforge.net/projects/giflib/files/giflib-5.2.1.tar.gz/download -O giflib-5.2.1.tar.gz
+wget https://sourceforge.net/projects/giflib/files/giflib-5.2.1.tar.gz/download -O giflib-5.2.1.tar.gz --no-check-certificate
 tar zxvf  giflib-5.2.1.tar.gz -C "${download_dir}"
 mv "${download_dir}/giflib-5.2.1" "${download_dir}/giflib"
 
