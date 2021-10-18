@@ -1,7 +1,7 @@
 #FROM quay.io/pypa/manylinux2014_aarch64:2021-09-06-7b0bd5d
 FROM odidev/imagecodecs_manylinux2014_aarch64:2021.10.05
 WORKDIR /opt/imagecodecs/build_utils
-
+RUN yum install -y wget
 COPY install_nasm.sh .
 RUN chmod u+x ./install_nasm.sh && ./install_nasm.sh
 
