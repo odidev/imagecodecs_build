@@ -68,4 +68,4 @@ workflows:
           matrix:
             parameters:
               cibw_build:
-                - "cp3[7-9]*"
+                - "cp37*"
