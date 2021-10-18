@@ -37,7 +37,7 @@ jobs:
           command: |
             cd build_utils
             ./docker_manylinux2014_aarch64.sh
-            ..
+            cd ..
       - run:
           name: Install dependencies
           command: |
