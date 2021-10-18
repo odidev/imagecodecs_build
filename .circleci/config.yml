@@ -34,27 +34,9 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            cd imagecodecs_src
-            git apply ../aarch64.patch
-            cd ..
-            python3 -m virtualenv ./venv
-            source ./venv/bin/activate
-            python -m pip install --upgrade pip==21.2.4
-            python -m pip install numpy cython
-            python -m pip install cibuildwheel==2.1.2
-            deactivate
-      - run:
-          name: cibuildwheel
-          command: |
-            source ./venv/bin/activate
-            python -m cibuildwheel ./imagecodecs_src --output-dir wheelhouse
-            deactivate
-      - python/save-cache:
-          key: manylinuxdepsv6-{{ .Branch }}.{{ arch }}
+            cd build_utils
+            ./docker_manylinux2014_aarch64.sh
 
-      - store_artifacts:
-          path: ./wheelhouse
-          destination: artifacts
 
 workflows:
   version: 2.1
