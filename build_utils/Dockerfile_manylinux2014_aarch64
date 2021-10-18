@@ -2,6 +2,7 @@
 FROM odidev/imagecodecs_manylinux2014_aarch64:2021.10.05
 WORKDIR /opt/imagecodecs/build_utils
 RUN yum install -y wget
+rm -rf /opt/imagecodecs/
 COPY install_nasm.sh .
 RUN chmod u+x ./install_nasm.sh && ./install_nasm.sh
 
