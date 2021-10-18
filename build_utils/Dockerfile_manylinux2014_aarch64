@@ -1,4 +1,4 @@
-FROM quay.io/pypa/manylinux2014_aarch64
+FROM quay.io/pypa/manylinux2014_aarch64:2021-09-06-7b0bd5d
 WORKDIR /opt/imagecodecs/build_utils
 
 COPY install_nasm.sh .
